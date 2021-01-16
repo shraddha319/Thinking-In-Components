@@ -1,0 +1,74 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+:root {
+  --gray-bg: #e5e7eb;
+  --dark-gray: #4b5563;
+}
+
+#root {
+  width: inherit;
+  height: inherit;
+}
+
+.reaction-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.reaction {
+  width: 5rem;
+  margin: 0.1rem;
+  padding: 0.4rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  border-radius: 0.5rem;
+  outline: none;
+  position: relative;
+}
+
+.reaction:hover {
+  background-color: var(--gray-bg);
+}
+
+.reaction:hover .reaction-text {
+  visibility: visible;
+}
+
+.reaction-emoji {
+  padding: 0.2rem;
+}
+
+.reaction-count {
+  padding: 0.2rem;
+  color: var(--dark-gray);
+}
+
+.reaction .reaction-text {
+  position: absolute;
+  visibility: hidden;
+  width: 80px;
+  top: -10px;
+  left: 105%;
+  background-color: var(--dark-gray);
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
